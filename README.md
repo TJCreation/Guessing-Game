@@ -1,0 +1,1 @@
+After a guess is made, the code is not allowing the player to make their next guess. Instead, the code is ending.  I am new to coding, so I'm still working out how to get the code to loop back to make another guess attempt.  Feel free to weigh in if you'd like!  :)
