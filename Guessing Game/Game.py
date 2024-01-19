@@ -19,16 +19,19 @@ while count < counter:
     count += 1
     break
 
-# Taking a Guess Input
-guess = int(input("Guess a number: "))
+# Taking a Guess Input and Testing the Condition
+while count <= counter:
+    guess = int(input("Guess a number: "))
+    if x == guess:
+        print(f"Congratulations!  You guessed correctly in", count, "tries!")
+        break
+    elif x > guess:
+        print("Your guess was low!")
+        count += 1
+    elif x < guess:
+        print("Your guess was high!")
+        count += 1
 
-# Condition Testing
-if x == guess:
-    print(f"Congratulations!  You guessed correctly in", count, "tries!")
-elif x > guess:
-    print("Your guess was low!")
-elif x < guess:
-    print("Your guess was high!")
 
 # If guesses exceeds the allowed amount
 if count >= counter:
