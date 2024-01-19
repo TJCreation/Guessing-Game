@@ -14,10 +14,7 @@ x = random.randint(lower, upper)
 print(f"You have", round(counter), "chances to guess the number!")
 
 # Counting Number of Guesses
-count = 0
-while count < counter:
-    count += 1
-    break
+count = 1
 
 # Taking a Guess Input and Testing the Condition
 while count <= counter:
@@ -28,12 +25,14 @@ while count <= counter:
     elif x > guess:
         print("Your guess was low!")
         count += 1
+        print(f"You are on guess number:", count,)
     elif x < guess:
         print("Your guess was high!")
         count += 1
+        print(f"You are on guess number:", count, )
 
 
 # If guesses exceeds the allowed amount
-if count >= counter:
+if count > counter:
     print(f"Guesses tried:", count)
     print("Better luck next time!")
