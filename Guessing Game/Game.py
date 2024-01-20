@@ -17,7 +17,7 @@ print(f"You have", round(counter), "chances to guess the number!")
 count = 1
 
 # Taking a Guess Input and Testing the Condition
-while count <= counter:
+while count < counter:
     guess = int(input("Guess a number: "))
     if x == guess:
         print(f"Congratulations!  You guessed correctly in", count, "tries!")
@@ -31,8 +31,18 @@ while count <= counter:
         count += 1
         print(f"You are on guess number:", count, )
 
-
-# If guesses exceeds the allowed amount
-if count > counter:
-    print(f"Guesses tried:", count)
-    print("Better luck next time!")
+# The Final Guess
+while count > counter:
+    print("This is your final guess!")
+    guess = int(input("Guess a number: "))
+    if x == guess:
+        print(f"Congratulations!  You guessed correctly in", count, "tries!")
+        break
+    elif x > guess:
+        print("Your guess was low!")
+        print("Better Luck Next Time!")
+        break
+    elif x < guess:
+        print("Your guess was high!")
+        print("Better Luck Next Time!")
+        break
